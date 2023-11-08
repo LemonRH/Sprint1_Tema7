@@ -1,19 +1,20 @@
 <?php
-function notas(){
-    //introduccion nota
-    echo "Introduce la nota que has sacado: ";
-    $nota = readline();
-    if ($nota >= 6 && $nota<10) {
-        echo "Primra division";
-      } elseif ($nota >= 4.5) {
-        echo "Segunda división";
-      } elseif ($nota >= 3.3) {
-        echo "Tercera division";
-      }elseif ($nota < 3.3) {
-        echo "SUSPENSO";
-      }else{
-        echo "No has introducido un numero correcto.";
-      }
+class CalculadoraNotas {
+    public function calcularDivision($nota) {
+        if ($nota >= 6 && $nota < 10) {
+            return "Primera division";
+        } elseif ($nota >= 4.5) {
+            return "Segunda division";
+        } elseif ($nota >= 3.3) {
+            return "Tercera division";
+        } elseif ($nota < 3.3) {
+            return "SUSPENSO";
+        } else {
+            return "No has introducido un numero correcto.";
+        }
+    }
 }
-notas();
+
+//cambiamos el ejercicio, creamos una clase para calcular notas y luego empleamos la funcion que teniamos para elegir si estará en primera,segunda...
+
 ?>
